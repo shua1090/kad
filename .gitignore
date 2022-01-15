@@ -1,0 +1,7 @@
+cmake-build-debug
+cmake*/
+*.exe
+*.obj
+*.pdb
+*.o
+*.a
