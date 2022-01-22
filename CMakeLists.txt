@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.21)
+cmake_minimum_required(VERSION 3.16)
 project(kademlia_rt)
 
 set(CMAKE_CXX_STANDARD 11)
