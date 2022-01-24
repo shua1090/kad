@@ -5,3 +5,6 @@ cmake*/
 *.pdb
 *.o
 *.a
+build
+CMake*
+.idea
