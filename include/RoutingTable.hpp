@@ -134,6 +134,7 @@ namespace Kademlia {
     class KBucket{
         std::string prefix;
         LimitedList<Node> bucket;
+
     public:
         KBucket * Left = nullptr;
         KBucket * Right = nullptr;
@@ -194,8 +195,17 @@ namespace Kademlia {
     class KademliaSearchTree{
         KBucket * rootLeft = nullptr;
         KBucket * rootRight = nullptr;
-
+        bool efficientStorage = false;
+        Node curNode;
     public:
+        void makeEfficient(Node myNode){
+            if (rootLeft == nullptr || rootRight == nullptr){
+                // It's too late, we've already created buckets
+            }
+            this->efficientStorage = true;
+            curNode = myNode;
+        }
+
         void insertNode(Node node){
             if (rootLeft == nullptr || rootRight == nullptr ){
                 rootLeft = new KBucket("0",5);
